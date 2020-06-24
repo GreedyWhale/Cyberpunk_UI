@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "./src/lib",
+    "baseUrl": "",
+    "declaration": true,
+    "declarationDir": "dist/@types",
+    "esModuleInterop": true,
+    "target": "ES5",
+    "lib": ["DOM", "ES6"],
+    "sourceMap": true,
+    "jsx": "react",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "include": ["src/lib"],
+  "exclude": ["node_modules", "*.js", "dist"]
+}
