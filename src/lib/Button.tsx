@@ -1,5 +1,5 @@
 import React from 'react'
-const Button = () =>  (
+const Button = () => (
   <div>按钮</div>
 )
 

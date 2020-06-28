@@ -3,4 +3,3 @@ import ReactDom from 'react-dom'
 import Button from './Button'
 
 ReactDom.render(<Button />, document.querySelector('#app'))
-
