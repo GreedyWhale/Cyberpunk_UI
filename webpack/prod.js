@@ -1,17 +1,10 @@
-/*
- * @Author: MADAO
- * @Date: 2020-06-16 14:36:54
- * @LastEditors: MADAO
- * @LastEditTime: 2020-06-24 15:13:33
- * @Description: webpack 生产环境配置
- */
-const merge = require('webpack-merge')
-const baseConfig = require('./webpack.base')
+const { merge } = require('webpack-merge')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const base = require('./base')
 
-module.exports = merge(baseConfig, {
-  mode: "production",
-  devtool: "none",
+module.exports = merge(base, {
+  mode: 'production',
+  devtool: false,
   externals: {
     react: {
       commonjs: 'react',

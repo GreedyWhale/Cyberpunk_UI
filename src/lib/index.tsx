@@ -1,5 +1,6 @@
+
 import React from 'react'
 import ReactDom from 'react-dom'
-import Button from './Button'
 
-ReactDom.render(<Button />, document.querySelector('#app'))
+const App = () => <div>help</div>
+ReactDom.render(<App />, document.querySelector('#app'))

@@ -1,14 +1,7 @@
-/*
- * @Author: MADAO
- * @Date: 2020-06-28 15:39:31
- * @LastEditors: MADAO
- * @LastEditTime: 2020-06-28 15:42:35
- * @Description: eslint 配置文件
- */
 module.exports = {
   env: {
     browser: true,
-    es2020: true
+    es2021: true
   },
   extends: [
     'plugin:react/recommended',
@@ -19,7 +12,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     },
-    ecmaVersion: 11,
+    ecmaVersion: 12,
     sourceType: 'module'
   },
   plugins: [
@@ -27,5 +20,12 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error']
+  },
+  globals: {
+    describe: 'readonly',
+    test: 'readonly',
+    expect: 'readonly'
   }
 }

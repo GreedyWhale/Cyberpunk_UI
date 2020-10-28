@@ -1,0 +1,23 @@
+const { merge } = require('webpack-merge')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { join } = require('path')
+const base = require('./base')
+
+module.exports = merge(base, {
+  mode: "development",
+  devtool: "eval-cheap-module-source-map",
+  devServer: {
+    compress: true,
+    contentBase: join(__dirname, '../dist'),
+    open: true,
+    hot: true,
+    host: "0.0.0.0",
+    useLocalIp: true,
+    progress: true
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: join(__dirname, '../src/template/index.html')
+    })
+  ]
+})
