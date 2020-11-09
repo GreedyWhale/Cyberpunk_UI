@@ -5,8 +5,8 @@
   "main": "dist/index",
   "types": "dist/@types",
   "scripts": {
-    "dev": "webpack serve --config ./webpack/dev.js",
-    "dist": "webpack --config ./webpack/prod.js",
+    "dev": "cross-env NODE_ENV=development webpack serve --config ./webpack/dev.js",
+    "dist": "cross-env NODE_ENV=production webpack --config ./webpack/prod.js",
     "test": "jest"
   },
   "repository": {
@@ -35,6 +35,8 @@
     "@typescript-eslint/parser": "^4.6.0",
     "babel-jest": "^26.6.1",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.1",
     "eslint": "^7.12.1",
     "eslint-config-standard": "^15.0.0",
     "eslint-plugin-import": "^2.22.1",
@@ -45,6 +47,9 @@
     "html-webpack-plugin": "^4.5.0",
     "jest": "^26.6.1",
     "react-test-renderer": "^17.0.1",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.0.5",
+    "style-loader": "^2.0.0",
     "ts-loader": "^8.0.7",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.5",

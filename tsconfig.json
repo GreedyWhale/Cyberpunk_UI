@@ -21,6 +21,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },
-  "include": ["src/lib"],
+  "include": [
+    "src/lib",
+    "src/types"
+  ],
   "exclude": ["node_modules", "*.js", "dist"]
 }

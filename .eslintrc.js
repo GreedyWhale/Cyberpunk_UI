@@ -21,11 +21,13 @@ module.exports = {
   ],
   rules: {
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error']
+    '@typescript-eslint/no-use-before-define': ['error'],
+    'react/display-name': 'off'
   },
   globals: {
     describe: 'readonly',
     test: 'readonly',
-    expect: 'readonly'
+    expect: 'readonly',
+    JSX: 'readonly'
   }
 }
