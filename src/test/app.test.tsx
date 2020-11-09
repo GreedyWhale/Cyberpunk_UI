@@ -1,11 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-
-const App = () => <div>hello world</div>
+import Button from '@/lib/button'
 
 describe('App', () => {
-  test('App 文本内容是 hello world', () => {
-    const component = renderer.create(<App />)
-    expect(component.toJSON().children[0] === 'hello world')
+  test('Button 组件的文案是 按钮', () => {
+    const component = renderer.create(<Button />)
+    // @ts-ignore
+    expect(component.toJSON().children[0]).toBe('按钮')
   })
 })

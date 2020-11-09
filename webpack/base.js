@@ -1,4 +1,4 @@
-const { join } = require('path')
+const { join, resolve } = require('path')
 
 const isDevelopment = () => process.env.NODE_ENV === 'development'
 
@@ -13,6 +13,9 @@ module.exports = {
     libraryTarget: 'umd'
   },
   resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src')
+    },
     extensions: ['.tsx', '.ts', '.js']
   },
   module: {

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import ReactDom from 'react-dom'
-import Button from './button'
+import Button from '@/lib/button'
 
 const App = () => {
   return (

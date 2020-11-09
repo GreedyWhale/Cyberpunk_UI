@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "./src/lib",
-    "baseUrl": "",
+    "rootDir": "src",
+    "baseUrl": ".",
     "declaration": true,
     "declarationDir": "dist/@types",
     "esModuleInterop": true,
@@ -19,11 +19,15 @@
     "importHelpers": true,
     "strictNullChecks": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
   },
   "include": [
     "src/lib",
-    "src/types"
+    "src/types",
+    "src/test"
   ],
   "exclude": ["node_modules", "*.js", "dist"]
 }
