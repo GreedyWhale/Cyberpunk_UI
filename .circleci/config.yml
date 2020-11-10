@@ -10,16 +10,16 @@ jobs:
       - checkout
       - restore_cache:
         keys:
-        - v2-devDependencies-{{ checksum "package.json" }}
+          - v2-devDependencies-{{ checksum "package.json" }}
       - run: yarn install
       - save_cache:
           paths:
-          - node_modules
+            - node_modules
           key: v2-devDependencies-{{ checksum "package.json" }}
       - persist_to_workspace:
           root: .
           paths:
-          - node_modules
+            - node_modules
   test:
     <<: *defaults
     steps:
@@ -29,7 +29,7 @@ jobs:
       - run: yarn ci
       - store_test_results:
           paths:
-          - test_results
+            - test_results
   build:
     <<: *defaults
     steps:
@@ -40,7 +40,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-          - dist
+            - dist
 workflows:
   version: 2.1
   build_accept_deploy:
