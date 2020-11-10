@@ -2,7 +2,8 @@
 
 import React from 'react'
 import ReactDom from 'react-dom'
-import Button from '@/lib/button'
+// @ts-ignore
+import Button from '@/lib/Button'
 
 const App = () => {
   return (
