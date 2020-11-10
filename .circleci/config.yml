@@ -13,7 +13,7 @@ jobs:
       - save_cache:
           path: node_modules
           key: v2-devDependencies-{{ checksum "package.json" }}
-      - persist_to_workspace
+      - persist_to_workspace:
           root: .
           path: node_modules
   test:
@@ -31,7 +31,7 @@ jobs:
     - attach_workspace:
         at: .
     - run: yarn build
-    - persist_to_workspace
+    - persist_to_workspace:
           root: .
           path: dist
 workflows:
