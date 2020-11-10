@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Button from '../lib/Button'
+import Button from '@/lib/Button'
 
 describe('App', () => {
   test('Button 组件的文案是 按钮', () => {
