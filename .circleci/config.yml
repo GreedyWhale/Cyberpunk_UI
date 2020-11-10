@@ -1,0 +1,45 @@
+version: 2.1
+defaults: &defaults
+  docker:
+    -image: circleci/node:15.0.1
+jobs:
+  prepare:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+        keys: v2-devDependencies-{{ checksum "package.json" }}
+      - run: yarn install
+      - save_cache:
+          path: node_modules
+          key: v2-devDependencies-{{ checksum "package.json" }}
+      - persist_to_workspace
+          root: .
+          path: node_modules
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: yarn ci
+      - store_test_results:
+          path: test_results
+  build:
+    <<: *defaults
+    - checkout
+    - attach_workspace:
+        at: .
+    - run: yarn build
+    - persist_to_workspace
+          root: .
+          path: dist
+workflows:
+  version: 2.1
+  build_accept_deploy:
+    jobs:
+      - prepare
+      - test:
+          requires: prepare
+      - build:
+          requires: test
