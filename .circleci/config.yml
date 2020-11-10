@@ -27,13 +27,14 @@ jobs:
           path: test_results
   build:
     <<: *defaults
-    - checkout
-    - attach_workspace:
-        at: .
-    - run: yarn build
-    - persist_to_workspace:
-          root: .
-          path: dist
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: yarn build
+      - persist_to_workspace:
+            root: .
+            path: dist
 workflows:
   version: 2.1
   build_accept_deploy:
