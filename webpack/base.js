@@ -1,4 +1,4 @@
-const { join, resolve } = require('path')
+const { join } = require('path')
 
 const isDevelopment = () => process.env.NODE_ENV === 'development'
 
@@ -14,7 +14,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, '../src')
+      '@': join(__dirname, '../src')
     },
     extensions: ['.tsx', '.ts', '.js']
   },

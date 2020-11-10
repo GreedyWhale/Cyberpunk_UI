@@ -2,7 +2,6 @@
 
 import React from 'react'
 import ReactDom from 'react-dom'
-// @ts-ignore
 import Button from '@/lib/Button'
 
 const App = () => {
