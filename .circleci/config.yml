@@ -41,8 +41,7 @@ jobs:
           at: .
       - run: yarn ci
       - store_test_results:
-          paths:
-            - test_results
+          path: test_results
 
 workflows:
   version: 2
