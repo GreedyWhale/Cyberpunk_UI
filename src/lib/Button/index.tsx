@@ -13,6 +13,14 @@ const Button: React.FunctionComponent<ButtonProps> = (props) => {
       data-disabled={props.disable}
       data-corner={props.corner}
       className={style.button}>
+      {props.disable && (
+        <React.Fragment>
+          <span className={style.corner}></span>
+          <span className={style.corner}></span>
+          <span className={style.corner}></span>
+          <span className={style.corner}></span>
+        </React.Fragment>
+      )}
       <span>{props.children}</span>
     </button>
   )
