@@ -3,11 +3,7 @@ const { join } = require('path')
 const isDevelopment = () => process.env.NODE_ENV === 'development'
 
 module.exports = {
-  entry: {
-    index: join(__dirname, '../src/lib/index.tsx')
-  },
   output: {
-    filename: '[name]_[contenthash].js',
     path: join(__dirname, '../dist'),
     library: 'cyberpunk_ui',
     libraryTarget: 'umd'

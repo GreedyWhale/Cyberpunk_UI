@@ -22,7 +22,8 @@ module.exports = {
   rules: {
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
-    'react/display-name': 'off'
+    'react/display-name': 'off',
+    'react/prop-types': 'off'
   },
   globals: {
     describe: 'readonly',

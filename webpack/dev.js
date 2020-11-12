@@ -5,6 +5,12 @@ const base = require('./base')
 
 module.exports = merge(base, {
   mode: 'development',
+  entry: {
+    index: join(__dirname, '../src/example.tsx')
+  },
+  output: {
+    filename: '[name]_[contenthash].js'
+  },
   devtool: 'eval-cheap-module-source-map',
   devServer: {
     compress: true,

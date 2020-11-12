@@ -22,6 +22,9 @@
   ],
   "author": "caisr",
   "license": "MIT",
+  "files": [
+    "/dist/**/*"
+  ],
   "bugs": {
     "url": "https://github.com/GreedyWhale/Cyberpunk_UI/issues"
   },
@@ -29,6 +32,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
     "@types/jest": "^26.0.15",
     "@types/react": "^16.9.54",
     "@types/react-dom": "^16.9.9",

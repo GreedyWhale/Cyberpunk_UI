@@ -25,9 +25,7 @@
     },
   },
   "include": [
-    "src/lib",
-    "src/types",
-    "src/test"
+    "src/**/*"
   ],
   "exclude": ["node_modules", "*.js", "dist"]
 }
