@@ -1,11 +1,6 @@
 import React from 'react'
 
 export interface ButtonProps {
-  children?: React.ReactNode;
-  type?: 'ghost' | 'text' | 'toggle' | 'multiselect' | 'split';
-  normal?: boolean;
-  danger?: boolean;
-  safety?: boolean;
-  disable?: boolean;
-  corner?: false | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftDiagonal' | 'rightDiagonal' | 'left' | 'right' | 'all'
+  children: React.ReactNode;
+  effect?: 1 | 2 | 3 | 4;
 }
